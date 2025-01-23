@@ -1,0 +1,72 @@
+/* General Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #03101d;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: cursive;
+}
+
+.nav-link:hover {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Link Styling */
+.nav-link.active {
+  background-color: #071625;
+  color: white;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Add padding for better spacing */
+  }
+
+  .nav-item {
+    margin: 5px 0; /* Space between items */
+  }
+
+  .nav-link {
+    font-size: 18px; /* Slightly smaller font size */
+    padding: 10px 20px; /* Increase padding for touch targets */
+    border: 2px solid #28a745; /* Green border for links */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Make links block elements */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  .nav-link:hover {
+    background-color: #28a745; /* Change background on hover */
+    color: white; /* Change text color on hover */
+  }
+}

@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Experience & Qualifications</h2>
+  <div class="button-group">
+    <button (click)="showQualification()">Qualification</button>
+    <button (click)="showExperince()">Experience</button>
+  </div>
+  <div class="content-section">
+    <app-qualification *ngIf="Qualifications"></app-qualification>
+    <app-qualification1 *ngIf="Experince"></app-qualification1>
+  </div>
+</div>

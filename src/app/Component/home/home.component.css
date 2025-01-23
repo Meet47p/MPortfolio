@@ -1,0 +1,117 @@
+/* Resume Button Styling */
+.Rst {
+  text-decoration: none;
+}
+button.Resume {
+  background-color: rgb(209, 179, 179);
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  top: 340px;
+  right: -5px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: rgba(95, 64, 64, 0.1) 0px 4px 8px;
+  left: 300px;
+}
+
+/* Hover Effect */
+button.Resume:hover {
+  background-color: black; /* Darker green */
+  color: white;
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Active Effect (on click) */
+button.Resume:active {
+  background-color: rgb(209, 179, 179); /* Even darker green */
+  transform: translateY(0); /* Reset lift */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inner shadow for click effect */
+}
+.name {
+  position: relative;
+  top: 98px;
+  right: 3px;
+  left: 162px;
+  font-size: 84px;
+  font-family: cursive;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.name:hover {
+  color: #ff6347; /* Change to a different color on hover */
+  transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+.profession {
+  position: relative;
+  top: 102px;
+  right: 3px;
+  left: 164px;
+  font-size: 40px;
+  font-family: cursive;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.profession:hover {
+  color: #4682b4; /* Change to a different color on hover */
+  transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+.circle {
+  width: 427px;
+  height: 450px;
+  background-color: rgb(230 209 205);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s;
+  position: relative;
+  left: 790px;
+  top: -152px;
+}
+
+.circle:hover {
+  transform: scale(1.1); /* Slightly enlarge the circle on hover */
+}
+.size {
+  width: 80px;
+  display: flex;
+  position: relative;
+  bottom: 252px;
+  left: 153px;
+}
+
+.size:hover {
+  transform: scale(1.1); /* Slightly enlarge the circle on hover */
+}
+.size1 {
+  width: 80px;
+  display: flex;
+  position: relative;
+  bottom: 315px;
+  left: 230px;
+  right: 10px;
+}
+
+.size1:hover {
+  transform: scale(1.1); /* Slightly enlarge the circle on hover */
+}
+.size2 {
+  width: 60px;
+  display: flex;
+  position: relative;
+  bottom: 365px;
+  left: 321px;
+  right: 8px;
+}
+
+.size2:hover {
+  transform: scale(1.1); /* Slightly enlarge the circle on hover */
+}

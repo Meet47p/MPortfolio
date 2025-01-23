@@ -1,0 +1,78 @@
+.container {
+  display: flex; /* Use flexbox to align items vertically */
+  flex-direction: column; /* Stack items vertically */
+  align-items: normal; /* Center items horizontally */
+}
+
+.title {
+  margin: 0; /* Remove default margin */
+  font-family: cursive;
+  font-size: 23px;
+  color: black;
+  padding-left: 65px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+.title:hover {
+  color: #4682b4; /* Change to a different color on hover */
+  transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+.div1 {
+  /* text-align: center; Center the text in the description */
+  margin-top: 10px; /* Add some space above the description */
+}
+.btn1 {
+  background-color: rgb(230 209 205);
+  color: darkpink;
+  display: inline-flex;
+  align-content: space-between;
+  position: relative;
+  top: 16px;
+  right: -5px;
+  margin-left: 12px;
+  border: none;
+  border-radius: 10px;
+}
+.p1 {
+  font-size: 21px;
+  color: darkpink;
+  position: relative;
+  bottom: 323px;
+  left: 294px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+  font-family: cursive;
+}
+.p1:hover {
+  color: black; /* Change to a different color on hover */
+  transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+.image {
+  width: 260px;
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Add space between title and image */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+.image:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+.git {
+  color: black;
+  display: flex;
+  position: relative;
+  bottom: 91px;
+  left: 190px;
+  border: #4682b4 1px solid;
+  border-radius: 5px;
+  padding-left: 1px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+  font-family: cursive;
+}
+.git:hover {
+  color: #4682b4; /* Change to a different color on hover */
+  transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+a {
+  text-decoration: none;
+}

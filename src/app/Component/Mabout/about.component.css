@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+  font-family: "cursive", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* About Me Section */
+.about-me-section {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  /* Gradient background */
+  color: white;
+  padding: 40px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center text */
+  position: relative; /* For pseudo-elements */
+  overflow: hidden; /* To hide overflow from pseudo-elements */
+}
+
+.about-me-section h1 {
+  font-size: 36px;
+  font-family: cursive;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Spacing between letters */
+}
+
+/* Subheading Styles */
+.about-me-section h6 {
+  font-family: cursive;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Decorative Elements */
+.about-me-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Light overlay */
+  border-radius: 10px;
+  z-index: 0; /* Behind the text */
+}
+
+.about-me-section h1,
+.about-me-section h6 {
+  position: relative; /* Position relative for z-index */
+  z-index: 1; /* Bring text above the overlay */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .about-me-section {
+    padding: 20px;
+  }
+
+  .about-me-section h1 {
+    font-size: 28px;
+  }
+
+  .about-me-section h6 {
+    font-size: 16px;
+  }
+}
