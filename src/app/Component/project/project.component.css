@@ -5,7 +5,7 @@
 }
 
 .title {
-  margin: 0; /* Remove default margin */
+  margin: 10px; /* Remove default margin */
   font-family: cursive;
   font-size: 23px;
   color: black;
