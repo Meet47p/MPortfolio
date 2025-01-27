@@ -69,4 +69,12 @@
     background-color: #28a745; /* Change background on hover */
     color: white; /* Change text color on hover */
   }
+
+  .navbar-toggler {
+    border: none; /* Remove border from the toggle button */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #007bff; /* Change color of the toggle icon */
+  }
 }

@@ -92,24 +92,25 @@ button.Resume:active {
   transform: scale(1.1); /* Slightly enlarge the circle on hover */
 }
 .size1 {
-  width: 80px;
+  width: 48px;
   display: flex;
   position: relative;
   bottom: 315px;
   left: 230px;
   right: 10px;
+  margin: -1px;
 }
 
 .size1:hover {
   transform: scale(1.1); /* Slightly enlarge the circle on hover */
 }
 .size2 {
-  width: 60px;
+  width: 46px;
   display: flex;
   position: relative;
-  bottom: 365px;
-  left: 321px;
-  right: 8px;
+  bottom: 360px;
+  left: 292px;
+  margin: 1px;
 }
 
 .size2:hover {
