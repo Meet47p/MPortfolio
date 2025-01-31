@@ -15,16 +15,23 @@ body {
   border-radius: 10px;
   max-width: 800px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  text-align: center; /* Center text */
-  position: relative; /* For pseudo-elements */
-  overflow: hidden; /* To hide overflow from pseudo-elements */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating Text Effect */
+.floating-text {
+  display: inline-block;
+  animation: floatAnimation 3s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.2s); /* Different delay for staggered effect */
 }
 
 .about-me-section h1 {
   font-size: 36px;
   margin-bottom: 10px;
-  text-transform: uppercase; /* Uppercase text */
-  letter-spacing: 2px; /* Spacing between letters */
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .about-me-section h6 {
@@ -35,45 +42,68 @@ body {
 
 /* Technologies Section */
 .technologies-section {
-  background: #ffffff; /* White background */
+  background: white;
   padding: 40px;
   margin: 20px auto;
   border-radius: 10px;
   max-width: 800px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center text */
+  text-align: center;
+  overflow: hidden;
 }
 
 .tech-container {
-  position: relative; /* For pseudo-elements */
+  position: relative;
 }
 
 .tech-container h3 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333; /* Darker color for contrast */
-  text-transform: uppercase; /* Uppercase text */
-  letter-spacing: 1px; /* Spacing between letters */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Technologies List */
+/* Floating Technologies List */
 .tech-list {
-  list-style-type: none; /* Remove default list styling */
+  list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
 }
 
-.tech-list li {
+.tech-list .floating-item {
   font-size: 18px;
-  padding: 10px;
-  margin: 5px 0;
-  background: #e7f3fe; /* Light blue background */
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  padding: 12px 20px;
+  background: #e7f3fe;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: floatAnimation 3s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.2s); /* Different timing for each */
 }
 
-.tech-list li:hover {
-  background: #d1e7fd; /* Slightly darker blue on hover */
-  transform: translateY(-2px); /* Lift effect on hover */
+/* Floating Effect Animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Hover Effect */
+.tech-list .floating-item:hover {
+  background: #d1e7fd;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Design */
@@ -98,7 +128,7 @@ body {
     font-size: 24px;
   }
 
-  .tech-list li {
+  .tech-list .floating-item {
     font-size: 16px;
   }
 }

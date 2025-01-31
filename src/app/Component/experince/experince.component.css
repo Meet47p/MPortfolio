@@ -1,5 +1,30 @@
+/* General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Floating Heading Effect */
+.floating-text {
+  display: inline-block;
+  animation: floatAnimation 3s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.2s); /* Different delay for staggered effect */
+}
+
 /* Container Styling */
-/* Floating Theme for Heading */
+.container {
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Title Effect */
 .container h2 {
   font-size: 28px;
   color: #333;
@@ -17,19 +42,7 @@
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  text-align: center;
-  max-width: 800px;
-  margin: 50px auto;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Title Styling */
-
-/* Button Group Layout */
+/* Button Group */
 .button-group {
   display: flex;
   justify-content: center;
@@ -37,49 +50,51 @@
   margin-bottom: 20px;
 }
 
-/* Advanced Button Styles */
-button {
+/* Floating Buttons */
+.floating-button {
+  font-size: 16px;
+  padding: 12px 18px;
   background: linear-gradient(135deg, #007bff, #0056b3);
   color: white;
   border: none;
-  padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
+  animation: floatAnimation 3s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.2s); /* Different delay for each button */
 }
 
-button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: left 0.4s ease-in-out;
+/* Floating Animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-button:hover:before {
-  left: 0;
-}
-
-button:hover {
+/* Button Hover Effects */
+.floating-button:hover {
   background: linear-gradient(135deg, #0056b3, #003f88);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
-button:active {
-  transform: translateY(1px);
+.floating-button:active {
+  transform: translateY(2px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:focus {
+/* Button Focus */
+.floating-button:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
 }
@@ -94,13 +109,30 @@ button:focus {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Fade-In Effect for Content */
+app-qualification,
+app-qualification1 {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .button-group {
     flex-direction: column;
   }
 
-  button {
+  .floating-button {
     width: 100%;
     margin: 5px 0;
   }

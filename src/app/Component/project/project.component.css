@@ -1,78 +1,111 @@
-.container {
-  display: flex; /* Use flexbox to align items vertically */
-  flex-direction: column; /* Stack items vertically */
-  align-items: normal; /* Center items horizontally */
+/* General container for projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create a responsive grid */
+  gap: 20px;
+  padding: 20px;
 }
 
+/* Title style */
 .title {
-  margin: 10px; /* Remove default margin */
-  font-family: cursive;
-  font-size: 23px;
-  color: black;
-  padding-left: 65px;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
-}
-.title:hover {
-  color: #4682b4; /* Change to a different color on hover */
-  transform: scale(1.05); /* Slightly enlarge the text on hover */
+  font-family: 'Cursive', sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  transition: all 0.3s ease-in-out;
 }
 
-.div1 {
-  /* text-align: center; Center the text in the description */
-  margin-top: 10px; /* Add some space above the description */
+.title:hover {
+  color: #4682b4;
+  transform: scale(1.1);
+  background-color: #e0f7fa;
 }
+
+/* Container for project card */
+.project-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+/* Description section */
+.div1 {
+  margin-top: 10px;
+}
+
+.p1 {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Cursive', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.p1:hover {
+  color: #4682b4;
+  transform: scale(1.05);
+}
+
+/* Button styling */
 .btn1 {
-  background-color: rgb(230 209 205);
+  background-color: #e6d1cd;
   color: darkpink;
   display: inline-flex;
-  align-content: space-between;
-  position: relative;
-  top: 16px;
-  right: -5px;
-  margin-left: 12px;
+  padding: 8px 15px;
+  margin: 5px;
   border: none;
-  border-radius: 10px;
-}
-.p1 {
-  font-size: 21px;
-  color: darkpink;
-  position: relative;
-  bottom: 323px;
-  left: 294px;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
-  font-family: cursive;
-}
-.p1:hover {
-  color: black; /* Change to a different color on hover */
-  transform: scale(1.05); /* Slightly enlarge the text on hover */
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.image {
-  width: 260px;
-  height: auto; /* Maintain aspect ratio */
-  margin-top: 10px; /* Add space between title and image */
-  transform: translateY(-2px); /* Slight lift */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+.btn1:hover {
+  background-color: #4682b4;
+  color: white;
+  transform: scale(1.05);
 }
-.image:hover {
-  transform: scale(1.1); /* Slightly enlarge the image on hover */
-}
+
+/* GitHub button styling */
 .git {
-  color: black;
-  display: flex;
-  position: relative;
-  bottom: 91px;
-  left: 147px;
-  border: #4682b4 1px solid;
+  display: inline-flex;
+  padding: 10px 15px;
+  background-color: #4682b4;
+  color: white;
+  font-family: 'Cursive', sans-serif;
+  border: none;
   border-radius: 5px;
-  padding-left: 1px;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
-  font-family: cursive;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 .git:hover {
-  color: #4682b4; /* Change to a different color on hover */
-  transform: scale(1.05); /* Slightly enlarge the text on hover */
+  background-color: #3b7bbf;
+  transform: scale(1.05);
 }
+
 a {
   text-decoration: none;
 }

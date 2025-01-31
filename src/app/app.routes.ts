@@ -12,7 +12,8 @@ export const routes: Routes = [
     
     {
         path: '',
-        component: BlanlkComponent
+        redirectTo: '/home',
+        pathMatch: 'full'
     },
 
     {

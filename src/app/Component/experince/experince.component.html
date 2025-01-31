@@ -1,9 +1,13 @@
 <div class="container">
-  <h2>Experience & Qualifications</h2>
+  <h2 class="floating-text" style="--i:1">Experience & Qualifications</h2>
+
+  <!-- Button Group with Floating Effect -->
   <div class="button-group">
-    <button (click)="showQualification()">Qualification</button>
-    <button (click)="showExperince()">Experience</button>
+    <button class="floating-button" style="--i:2" (click)="showQualification()">Qualification</button>
+    <button class="floating-button" style="--i:3" (click)="showExperince()">Experience</button>
   </div>
+
+  <!-- Content Section -->
   <div class="content-section">
     <app-qualification *ngIf="Qualifications"></app-qualification>
     <app-qualification1 *ngIf="Experince"></app-qualification1>
