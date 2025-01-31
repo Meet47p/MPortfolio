@@ -74,7 +74,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets"
+                
               }
             ],
             "styles": ["src/styles.css"],

@@ -2,20 +2,29 @@
 .navbar {
   background: linear-gradient(135deg, #ffffff, #f0f0f0);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 10px 30px;
+  border-radius: 12px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
 }
 
-/* Navbar Links */
+/* Navbar Hover/Focus Effects */
+.navbar:hover {
+  background-color: #f8f8f8; /* Slight change on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+}
+
+/* Navbar Links Styling */
 .navbar-nav {
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
+  transition: all 0.3s ease;
 }
 
 .nav-item {
@@ -26,22 +35,43 @@
   text-decoration: none;
   font-size: 20px;
   color: #03101d;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-  font-family: cursive;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-family: 'Cursive', sans-serif;
+  position: relative;
+}
+
+/* Hover Effect for Navbar Links */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom right;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .nav-link:hover {
   background-color: #007bff;
   color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Active Link Styling */
 .nav-link.active {
   background-color: #071625;
   color: white;
+  font-weight: bold;
 }
 
 /* Mobile Responsive Adjustments */
@@ -49,25 +79,25 @@
   .navbar-nav {
     flex-direction: column; /* Stack items vertically */
     text-align: center; /* Center align text */
-    padding: 10px 0; /* Add padding for better spacing */
+    padding: 15px 0; /* Add padding for better spacing */
   }
 
   .nav-item {
-    margin: 5px 0; /* Space between items */
+    margin: 10px 0; /* Space between items */
   }
 
   .nav-link {
     font-size: 18px; /* Slightly smaller font size */
-    padding: 10px 20px; /* Increase padding for touch targets */
-    border: 2px solid #28a745; /* Green border for links */
-    border-radius: 5px; /* Rounded corners */
-    display: inline-block; /* Make links block elements */
+    padding: 12px 20px; /* Increase padding for better touch targets */
+    border-radius: 8px; /* Rounded corners */
+    display: inline-block; /* Block elements */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
   }
 
   .nav-link:hover {
     background-color: #28a745; /* Change background on hover */
-    color: white; /* Change text color on hover */
+    color: white;
+    border: 2px solid #28a745; /* Green border for links */
   }
 
   .navbar-toggler {
