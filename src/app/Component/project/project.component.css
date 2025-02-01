@@ -1,14 +1,17 @@
 /* General container for projects */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create a responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Create a responsive grid */
   gap: 20px;
   padding: 20px;
 }
 
 /* Title style */
 .title {
-  font-family: 'Cursive', sans-serif;
+  font-family: "Cursive", sans-serif;
   font-size: 24px;
   color: #333;
   text-align: center;
@@ -61,13 +64,18 @@
   font-size: 18px;
   color: #666;
   line-height: 1.6;
-  font-family: 'Cursive', sans-serif;
+  font-family: "Cursive", sans-serif;
   transition: color 0.3s ease;
 }
 
 .p1:hover {
   color: #4682b4;
   transform: scale(1.05);
+}
+
+/* Set li text color to black */
+.p1 ul li {
+  color: black;
 }
 
 /* Button styling */
@@ -81,6 +89,29 @@
   border-radius: 25px;
   font-weight: bold;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ocean wave effect */
+.btn1::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 10%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  transition: transform 0.5s ease-out;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.btn1:hover::before {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .btn1:hover {
@@ -95,7 +126,7 @@
   padding: 10px 15px;
   background-color: #4682b4;
   color: white;
-  font-family: 'Cursive', sans-serif;
+  font-family: "Cursive", sans-serif;
   border: none;
   border-radius: 5px;
   transition: transform 0.3s ease, background-color 0.3s ease;

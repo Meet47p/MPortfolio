@@ -64,13 +64,16 @@ button.Resume:active {
   color: #4682b4; /* Change to a different color on hover */
   transform: scale(1.05); /* Slightly enlarge the text on hover */
 }
+/* Circle container */
 .circle {
   width: 427px;
   height: 450px;
-  background-color: rgb(230 209 205);
+  background-color: rgb(230, 209, 205);
   border-radius: 50%;
-  display: inline-block;
-  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures the image stays within the circle */
   transition: transform 0.3s;
   position: relative;
   left: 790px;
@@ -80,6 +83,15 @@ button.Resume:active {
 .circle:hover {
   transform: scale(1.1); /* Slightly enlarge the circle on hover */
 }
+
+/* Profile picture inside the circle */
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+  border-radius: 50%; /* Keeps the image circular */
+}
+
 .size {
   width: 80px;
   display: flex;
