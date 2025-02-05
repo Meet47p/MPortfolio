@@ -128,3 +128,146 @@ button.Resume:active {
 .size2:hover {
   transform: scale(1.1); /* Slightly enlarge the circle on hover */
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    text-align: center;
+  }
+
+  /* Adjust the position and size of the Resume button */
+  button.Resume {
+    font-size: 24px;
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Adjust name and profession font sizes */
+  .name {
+    font-size: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .profession {
+    font-size: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Adjust circle size */
+  .circle {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Adjust social media icons */
+  .size, .size1 {
+    width: 60px;
+  }
+
+  .size1 {
+    bottom: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .size2 {
+    bottom: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Further adjustments for smaller screens */
+  .name {
+    font-size: 45px;
+  }
+
+  .profession {
+    font-size: 25px;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .size {
+    width: 50px;
+  }
+
+  .size1 {
+    width: 40px;
+  }
+
+  .size2 {
+    width: 40px;
+  }
+
+  button.Resume {
+    font-size: 20px;
+    top: 250px;
+  }
+
+  /* Adjust social media positions */
+  .size {
+    bottom: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .size1 {
+    bottom: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .size2 {
+    bottom: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens */
+  .name {
+    font-size: 35px;
+  }
+
+  .profession {
+    font-size: 22px;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .size {
+    width: 40px;
+  }
+
+  .size1 {
+    width: 30px;
+  }
+
+  .size2 {
+    width: 30px;
+  }
+
+  button.Resume {
+    font-size: 18px;
+    top: 220px;
+  }
+
+  /* Adjust social media icons */
+  .size, .size1, .size2 {
+    width: 35px;
+  }
+}

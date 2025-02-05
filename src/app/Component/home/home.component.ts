@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   downloadResume(){
-    console.log("hello world");
+    alert("Resume Downloaded");
   }
 }
 
